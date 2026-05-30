@@ -51,6 +51,7 @@ let user = {
 
 // user.intro();
 
+// reference copy 
 let piyush = user;
 user = null;
 
