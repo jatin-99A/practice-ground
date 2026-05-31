@@ -4,12 +4,12 @@
 // 1. capital latter name  [String, Number, Array, Object]
 // 2. Should be Executed by "new" Operator
 
-function User(name) {
-  this.name = name;
-  this.isPaid = false;
-};
+// function User(name) {
+//   this.name = name;
+//   this.isPaid = false;
+// };
 
-const aj = new User("Ani");
+// const aj = new User("Ani");
 // console.log(aj);
 
 // new ka jaadu...
@@ -17,13 +17,15 @@ const aj = new User("Ani");
 // 2. operations 
 // 3. return this;
 
-// function User(name) {
-//   this = {};
+function User(name) {
+  // this = {};
    
-//   this.name = name;
-//   this.isPaid = false;
+  this.name = name;
+  this.isPaid = false;
 
 
-//   return this;
-// };
+  return this;
+};
 
+User.aloo = "jatin";
+console.log(User.aloo)

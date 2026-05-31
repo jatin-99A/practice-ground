@@ -31,3 +31,5 @@ console.log(org === company); // true;
 
 // Technically, symbols are not 100% hidden. 
 // There is a built-in method Object.getOwnPropertySymbols(obj)
+
+console.log(yntp.description)

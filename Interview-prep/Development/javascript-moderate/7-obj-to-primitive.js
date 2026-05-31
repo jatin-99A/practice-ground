@@ -20,6 +20,11 @@ let galgota = {
 console.log(galgota);
 console.log(String(galgota));
 console.log(Number(galgota));
+console.log(galgota);
+console.log(String(galgota));
+console.log(Number(galgota));
+console.log(+galgota);
+console.log(`${galgota}`);
 
 // hint : "string" --> toString()
 // hint : "number" --> valueOf()
