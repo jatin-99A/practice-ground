@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Labels</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+
+  <!-- Name -->
+  <label for="name">Name:</label>
+  <input type="text" id="name" /><br><br>
+
+  <!-- Email -->
+  <label for="email">Email:</label>
+  <input type="email" id="email" /><br><br>
+
+  <!-- Password -->
+  <label for="password">Password:</label>
+  <input type="password" id="password" /><br><br>
+
+  <!-- Gender -->
+  <p>Gender:</p>
+
+  <input type="radio" id="male" name="gender" value="Male">
+  <label for="male">Male</label>
+
+  <input type="radio" id="female" name="gender" value="Female">
+  <label for="female">Female</label>
+
+  <br><br>
+
+  <!-- Skills -->
+  <p>Skills:</p>
+
+  <input type="checkbox" id="html" name="skills" value="HTML">
+  <label for="html">HTML</label>
+
+  <input type="checkbox" id="css" name="skills" value="CSS">
+  <label for="css">CSS</label>
+
+  <input type="checkbox" id="js" name="skills" value="JavaScript">
+  <label for="js">JavaScript</label>
+
+  <br><br>
+
+  <!-- City -->
+  <label for="city">City:</label>
+  <select id="city">
+    <option value="Delhi">Delhi</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Bangalore">Bangalore</option>
+  </select>
+
+  <br><br>
+
+  <!-- About -->
+  <label for="about">About:</label><br>
+  <textarea id="about"></textarea>
+
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const gender = document.querySelector('input[name="gender"]:checked');
+
+    const skills = Array.from(
+      document.querySelectorAll('input[name="skills"]:checked')
+    ).map(el => el.value);
+
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+      gender: gender ? gender.value : null,
+      skills: skills,
+      city: document.getElementById("city").value,
+      about: document.getElementById("about").value
+    };
+
+    console.log(data);
+  });
+</script>
+
+</body>
+</html>

@@ -33,6 +33,6 @@ movie.cast = coStar(
   {name: "Ana de Armas", salary: 2_000_000},
 )
 
-console.log(movie);
 
 movie.cast = null;
+console.log(movie);

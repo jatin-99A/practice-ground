@@ -59,6 +59,8 @@ const names = [
   "Radharaman",
 ];
 
+// name.splice()
+
 // console.log(names.sort());
 
 const numbers = [5, 11, 2, 37, 41, 77, 8, 28];
