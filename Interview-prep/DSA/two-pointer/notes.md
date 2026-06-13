@@ -9,6 +9,6 @@
 
 take p1 = 0 and p2 = n-1;
 
-if condition needed greater value than what we have rn increase p1++ otherwise p2--
+if condition needed greater value than what we have then increase p1++ otherwise p2--
 
 
