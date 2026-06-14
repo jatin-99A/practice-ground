@@ -5,9 +5,9 @@
 # ✅ Week 1: Arrays Basics (2-Pointer, Prefix Sum) — 15 Questions
 
 ## 🔹 Basic + Foundation
-- Two Sum (sorted array version)
-- Remove Duplicates from Sorted Array
-- Move Zeroes
+- Two Sum (sorted array version) ✅
+- Remove Duplicates from Sorted Array ✅
+- Move Zeroes 
 - Best Time to Buy and Sell Stock
 - Contains Duplicate
 
