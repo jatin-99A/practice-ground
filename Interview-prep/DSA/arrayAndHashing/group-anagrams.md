@@ -6,43 +6,52 @@ step 3 - then return all the groups in array
 
     SOLUTION :
                
-                var groupAnagrams = function (strs) {
-                    const map = new Map();
+    public class Solution {
+        public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
 
-                    for (const str of strs) {
-                        const key = str.split('').sort().join('');
+        for (String str : strs) {
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            String key = new String(chars);
 
-                        if (!map.has(key)) {
-                            map.set(key, [str]);
-                        } else {
-                            map.get(key).push(str);
-                        }
-                    }
+            if (!map.containsKey(key)) {
+                map.put(key, new ArrayList<>());
+            }
 
-                    return Array.from(map.values());
+            map.get(key).add(str);
+        }
 
-                };
+        return new ArrayList<>(map.values());
+    }
+
 
 
 # Optimal ------->
-var groupAnagrams = function(strs) {
-    const map = new Map();
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
 
-    for (const str of strs) {
-        const count = new Array(26).fill(0);
+        for (String str : strs) {
+            int[] count = new int[26];
 
-        for (const ch of str) {
-            count[ch.charCodeAt(0) - 97]++;
+            for (char ch : str.toCharArray()) {
+                count[ch - 'a']++;
+            }
+
+            StringBuilder key = new StringBuilder();
+
+            for (int num : count) {
+                key.append(num).append("#");
+            }
+
+            if (!map.containsKey(key.toString())) {
+                map.put(key.toString(), new ArrayList<>());
+            }
+
+            map.get(key.toString()).add(str);
         }
 
-        const key = count.join('#');
-
-        if (!map.has(key)) {
-            map.set(key, []);
-        }
-
-        map.get(key).push(str);
+        return new ArrayList<>(map.values());
     }
-
-    return [...map.values()];
-};
+}
